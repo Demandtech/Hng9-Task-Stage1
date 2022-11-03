@@ -1,12 +1,71 @@
 import React from 'react'
-import ReactDom from 'react-dom'
+import ReactDom from 'react-dom/client'
 import './index.css'
+
+const buttons = [
+    {
+        index: 1,
+        href: 'https://twitter.com/Demandtvs/',
+        btnName: 'Twitter Link',
+        className: 'btn',
+        id: 'twitter',
+    },
+    {
+        index: 2,
+        href: 'https://training.zuri.team',
+        btnName: 'Zuri Team',
+        className: 'btn',
+        id: 'btn__zuri',
+    },
+    {
+        index: 3,
+        href: 'http://books.zuri.team',
+        btnName: 'Zuri Books',
+        className: 'btn',
+        id: 'books',
+    },
+    {
+        index: 4,
+        href: 'https://books.zuri.team',
+        btnName: 'Python Books',
+        className: 'btn',
+        id: 'book__python',
+    },
+    {
+        index: 5,
+        href: ' https://background.zuri.team',
+        btnName: 'Background Check for coders',
+        className: 'btn',
+        id: 'pitch',
+        title: 'Proper background check on all our candidate',
+    },
+    {
+        index: 6,
+        href: 'https://books.zuri.team/design-rules',
+        btnName: 'Design Books',
+        className: 'btn',
+        id: 'book__design',
+        title: 'great designs',
+    },
+    {
+        index: 7,
+        href: '/contact',
+        btnName: 'Contact Me',
+        className: 'btn',
+        id: 'contact',
+    },
+]
+
 
 const Container = ()=>{
   return (
       <section className='container'>
           <Info />
-          <List />
+          <div className='btnsContainer'>
+                {buttons.map(button=>{
+                    return <Button key={button.index} button={button}/>
+                })} 
+          </div>
           <Icons />
           <Footer />
       </section>
@@ -37,61 +96,15 @@ const Info = ()=>{
 }
 
 
-const List = ()=>{
-  return (
-      <ul className='btn-list'>
-          <li>
-              <a className='btn'
-                  href='https://twitter.com/Demandtvs/'
-                  id='twitter'
-              >
-                  Twitter link
-              </a>
-          </li>
-          <li>
-              <a  className='btn'
-                  id='btn__zuri'
-                  href='“https://training.zuri.team”'
-              >
-                  Zuri Team
-              </a>
-          </li>
-          <li>
-              <a className='btn'
-                  id='books'
-                  href='http://books.zuri.team '
-              >
-                  Zuri Books
-              </a>
-          </li>
-          <li>
-              <a  className='btn'
-                  id='book__python'
-                  href='https://books.zuri.team'
-              >
-                  Python Books
-              </a>
-          </li>
-          <li>
-              <a  className='btn'
-                  id='pitch'
-                  title='Proper background check on all our candidate'
-                  href=' https://background.zuri.team'
-              >
-                  Background Check for Coders
-              </a>
-          </li>
-          <li>
-              <a  className='btn'
-                  title='great designs'
-                  id='book__design'
-                  href='https://books.zuri.team/design-rules'
-              >
-                  Design Books
-              </a>
-          </li>
-      </ul>
-  )
+
+const Button = (props) => {
+let {className, id, title, href, btnName} = props.button
+    return (
+      <a href={href} 
+      id={id} 
+      className={className} 
+      title={title}>{btnName}</a>      
+    )
 }
 
 const Icons = ()=> {
@@ -127,5 +140,9 @@ const Footer = ()=>{
   )
 }
 
-ReactDom.render(<Container />, document.getElementById('root'))
-
+const root = ReactDom.createRoot(document.getElementById('root'));
+root.render(
+    <React.StrictMode>
+        <Container />
+    </React.StrictMode>
+)

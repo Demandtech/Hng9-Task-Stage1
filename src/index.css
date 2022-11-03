@@ -14,6 +14,7 @@
 
 .header {
     position: relative;
+   
 }
 
 .nav-icon {
@@ -25,12 +26,8 @@
     top: 0;
 }
 
-.btn-list {
-    list-style-type: none;
-    text-align: center;
-    margin-top: 20px;
-    padding: 20px;
-    margin-bottom: 50px;
+.btnsContainer {
+   padding: 40px 0; 
 }
 
 .btn {
@@ -40,9 +37,16 @@
     margin-bottom: 15px;
     padding: 15px 0;
     background-color: #eaecf0;
+    height: 20px;
     border-radius: 5px;
     color: #101828;
     font-weight: 700;
+    transition: 1s;
+}
+
+.btn:hover{
+    background-color: #667085;
+    color: hsl(0, 0%, 98%);
 }
 
 .name {
@@ -98,7 +102,7 @@
         transform: scale(0.6);
         
     }
-    .btn-list {
+    .btnsContainer {
         padding: 10px;
     }
     .footer-wrapper {
