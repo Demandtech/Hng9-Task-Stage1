@@ -1,0 +1,53 @@
+export const buttons = [
+    {
+        index: 1,
+        href: 'https://twitter.com/Demandtvs/',
+        btnName: 'Twitter Link',
+        className: 'btn',
+        id: 'twitter',
+    },
+    {
+        index: 2,
+        href: 'https://training.zuri.team',
+        btnName: 'Zuri Team',
+        className: 'btn',
+        id: 'btn__zuri',
+    },
+    {
+        index: 3,
+        href: 'http://books.zuri.team',
+        btnName: 'Zuri Books',
+        className: 'btn',
+        id: 'books',
+    },
+    {
+        index: 4,
+        href: 'https://books.zuri.team',
+        btnName: 'Python Books',
+        className: 'btn',
+        id: 'book__python',
+    },
+    {
+        index: 5,
+        href: ' https://background.zuri.team',
+        btnName: 'Background Check for coders',
+        className: 'btn',
+        id: 'pitch',
+        title: 'Proper background check on all our candidate',
+    },
+    {
+        index: 6,
+        href: 'https://books.zuri.team/design-rules',
+        btnName: 'Design Books',
+        className: 'btn',
+        id: 'book__design',
+        title: 'great designs',
+    },
+    {
+        index: 7,
+        to: './contact',
+        btnName: 'Contact Me',
+        className: 'btn',
+        id: 'contact',
+    },
+]
