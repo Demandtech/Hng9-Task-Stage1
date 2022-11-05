@@ -1,25 +1,11 @@
-import React from 'react'
+import React from 'react';
+import Buttons from './Buttons'
 
-const Button = (props) => {
-    let {
-        className,
-        id,
-        title,
-        href,
-        btnName,
-        to,
-    } = props.button
-    return (
-        <a
-            href={href}
-            id={id}
-            to={to}
-            className={className}
-            title={title}
-        >
-            {btnName}
-        </a>
-    )
+
+const Button = () => {
+    return(
+          <Buttons/>
+        )
 }
 
 export default Button

@@ -1,53 +1,62 @@
-export const buttons = [
-    {
-        index: 1,
-        href: 'https://twitter.com/Demandtvs/',
-        btnName: 'Twitter Link',
-        className: 'btn',
-        id: 'twitter',
-    },
-    {
-        index: 2,
-        href: 'https://training.zuri.team',
-        btnName: 'Zuri Team',
-        className: 'btn',
-        id: 'btn__zuri',
-    },
-    {
-        index: 3,
-        href: 'http://books.zuri.team',
-        btnName: 'Zuri Books',
-        className: 'btn',
-        id: 'books',
-    },
-    {
-        index: 4,
-        href: 'https://books.zuri.team',
-        btnName: 'Python Books',
-        className: 'btn',
-        id: 'book__python',
-    },
-    {
-        index: 5,
-        href: ' https://background.zuri.team',
-        btnName: 'Background Check for coders',
-        className: 'btn',
-        id: 'pitch',
-        title: 'Proper background check on all our candidate',
-    },
-    {
-        index: 6,
-        href: 'https://books.zuri.team/design-rules',
-        btnName: 'Design Books',
-        className: 'btn',
-        id: 'book__design',
-        title: 'great designs',
-    },
-    {
-        index: 7,
-        to: './contact',
-        btnName: 'Contact Me',
-        className: 'btn',
-        id: 'contact',
-    },
-]
+import {Link} from 'react-router-dom'
+
+function Buttons (){
+    return (
+        <div className='btnContainer'>
+            <a
+                href='https://twitter.com/Demandtvs/'
+                className='btn'
+                id='twitter'
+            >
+                Twitter Link
+            </a>
+            <a
+                href='https://training.zuri.team'
+                className='btn'
+                id='btn__zuri'
+            >
+                Zuri Team
+            </a>
+            <a
+                href='http://books.zuri.team'
+                className='btn'
+                id='books'
+            >
+                Zuri Books
+            </a>
+            <a
+                href='https://books.zuri.team'
+                className='btn'
+                id='book__python'
+            >
+                Python Books
+            </a>
+            <a
+                href=' https://background.zuri.team'
+                className='btn'
+                id='pitch'
+                title='Proper background check on all our candidate'
+            >
+                Background Check for coders
+            </a>
+            <a
+                href='https://books.zuri.team/design-rules'
+                className='btn'
+                id='book__design'
+                title='Get your latest design books'
+            >
+                Desin Book
+            </a>
+            <Link
+                className='btn'
+                id='contact'
+                to='./contact'
+            >
+                Contact Me
+            </Link>
+        </div>
+    )
+}
+
+
+export default Buttons
