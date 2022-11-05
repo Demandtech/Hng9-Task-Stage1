@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Hng9-Task-Stage1/static/css/main.e239a78c.css",
+    "main.js": "/Hng9-Task-Stage1/static/js/main.ecde6b6a.js",
+    "index.html": "/Hng9-Task-Stage1/index.html",
+    "main.e239a78c.css.map": "/Hng9-Task-Stage1/static/css/main.e239a78c.css.map",
+    "main.ecde6b6a.js.map": "/Hng9-Task-Stage1/static/js/main.ecde6b6a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e239a78c.css",
+    "static/js/main.ecde6b6a.js"
+  ]
+}
