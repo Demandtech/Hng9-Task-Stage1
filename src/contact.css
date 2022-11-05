@@ -54,7 +54,7 @@ input[type='text'], [type = 'email'] {
     width: 100%;
     border-radius: 8px;
     border: 2px solid var(--borderColor);
-    padding: 10px;
+    padding: 15px;
     margin-bottom: 20px;
 }
 

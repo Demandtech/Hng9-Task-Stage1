@@ -41,13 +41,13 @@ function Form() {
    e.preventDefault()
    if(firstName && lastName && email && message && check){
      const sender = {id:new Date().getTime().toString().slice(0, 4) ,lastName, firstName, email, message}
-     console.log(sender);
+     console.log(check);
      setSenders((people)=>{
       return[...people, sender]
      });
      setFirstName('');
      setEmail('');
-     setCheck(false);
+     setCheck(check);
      setLastName('');
      setMessage('')
    }else {
@@ -135,9 +135,9 @@ function Form() {
                      type='checkbox'
                      name='confirm'
                      id='confirm'
-                     checked={check}
+                    
                      onChange={() =>
-                         setCheck(true)
+                         setCheck(!check)
                      }
                  />
                  <label htmlFor=''>
